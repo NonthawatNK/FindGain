@@ -8,6 +8,7 @@ from Count_data import *
 # เตรียมข้อมูล และ นับข้อมูล
 path = "D:\data_mining\Dessiontree\Generator5_replace_2_eng_uni_new.csv"
 allCount = Countdata(path)
+# หลังจากที่ได้การนับมาแล้ว ก็เลือกว่าจะใช้ข้อมูลไหนบ้าง
 Attribute_1=allCount[0]
 Att_1CI=allCount[1]
 Attribute_2=allCount[2]
