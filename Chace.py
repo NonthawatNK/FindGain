@@ -1,10 +1,10 @@
 import pandas as pd
 
-filename = "instance.txt"
+filename = "seed5_1000exsample.txt"
 
 df = pd.read_csv(filename, delimiter=",")
 
-df.replace()
+
 
 
 df["Att_1"]=df["Att_1"].replace(1,"A")
@@ -29,7 +29,7 @@ df["Att_7"]=df["Att_7"].replace(1,"M")
 df["Att_7"]=df["Att_7"].replace(0,"N")
 
 compression_opts = dict(method='zip',
-                        archive_name='out.csv')  
+                        archive_name='1000example.csv')  
 
-df.to_csv('out.zip', index=False,
+df.to_csv('1000example.zip', index=False,
           compression=compression_opts)  

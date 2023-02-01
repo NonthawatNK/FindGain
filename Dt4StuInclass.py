@@ -6,7 +6,7 @@ from Dtreefunc import *
 from Count_data import *
 
 # เตรียมข้อมูล และ นับข้อมูล
-path = "D:\data_mining\Dessiontree\Generator5_replace_2_eng_uni_new.csv"
+path = "D:\data_mining\Dessiontree\FindGin\\1000example.csv"
 allCount = Countdata(path)
 # หลังจากที่ได้การนับมาแล้ว ก็เลือกว่าจะใช้ข้อมูลไหนบ้าง
 Attribute_1=allCount[0]
@@ -244,17 +244,15 @@ pos=np.argmax(Result_All)
 print("max gain of attb is %5.3f" % max_gain,"position is",pos)
 
 
-#วน loop แยก dataset ตาม attb 1
-X2L=[] #ข้อมูลสำหรับสร้าง level 2 ที่ Attb 1 A
-X2R=[] #ข้อมูลสำหรับสร้าง level 2 ที่ Attb 1 B
-f1=open("D:\data_mining\Dessiontree\L2\\NumDisplayL2left.csv","w")
-f2=open("D:\data_mining\Dessiontree\L2\\NumDisplayL2right.csv","w")
+# #วน loop แยก dataset ตาม attb 1
+f1=open("D:\data_mining\Dessiontree\FindGin\L\DisplayL2left.csv","w")
+f2=open("D:\data_mining\Dessiontree\FindGin\R\DisplayL2right.csv","w")
 
-#นับจำนวน Attb ที่คัดออกไปเป็น Root คือ Att 1
+#นับจำนวน Attb ที่คัดออกไปเป็น Root คือ Att 2 C D
 for i in range(0,1000):
-    if ((X[i].count('A')==1)): 
+    if ((X[i].count('C')==1)): 
         f1.write(str(X[i]))
-    elif(X[i].count('B')==1):
+    elif(X[i].count('D')==1):
         f2.write(str(X[i]))
 
 
